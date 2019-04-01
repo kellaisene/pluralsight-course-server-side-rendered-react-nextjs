@@ -20,9 +20,27 @@ class DigitalClock extends Component {
         m = (m < 10) ? "0" + m : m;
         s = (s < 10) ? "0" + s : s;
 
+        const afternoon = "Good afternoon!";
+        const evening = "Good evening!";
+        const morning = "Good morning!";
+        const greeting = (afternoon, evening, morning) => {
+        if (session = "PM" && h <= 5) {
+            return afternoon
+        } else if (session = "PM" && h >= 5) {
+            return evening
+        } else if (session = "AM") {
+            return morning
+        }
+        }
+        
+
         const time = h + ":" + m + ":" + s + " " + session;
+
         return (
+            <div className="container">
+            <div className="text">{greeting(afternoon, evening, morning)}</div>
             <div className="clock">{time}</div>
+            </div>
         );
     }
 }

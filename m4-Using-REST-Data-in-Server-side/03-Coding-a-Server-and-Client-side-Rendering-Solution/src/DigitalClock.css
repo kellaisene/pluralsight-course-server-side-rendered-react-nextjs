@@ -11,6 +11,20 @@ body {
     justify-content: center;
 }
 
+.container {
+    display: flex;
+
+}
+
+.text {
+    position: relative;
+    bottom: 70px;
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+
 .clock {
     position: absolute;
     top: 50%;
