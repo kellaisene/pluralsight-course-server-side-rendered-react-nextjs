@@ -23,14 +23,15 @@ class DigitalClock extends Component {
         const afternoon = "Good afternoon!";
         const evening = "Good evening!";
         const morning = "Good morning!";
-        const greeting = (afternoon, evening, morning) => {
-        if (session = "PM" && h <= 5) {
-            return afternoon
-        } else if (session = "PM" && h >= 5) {
-            return evening
-        } else if (session = "AM") {
+        const greeting = (evening, morning) => {
+        if (session = "AM") {
             return morning
-        }
+        } else {
+            return evening
+        } 
+        // else if (session = "AM") {
+        //     return morning
+        // }
         }
         
 
@@ -38,7 +39,7 @@ class DigitalClock extends Component {
 
         return (
             <div className="container">
-            <div className="text">{greeting(afternoon, evening, morning)}</div>
+            <div className="text">{greeting(evening, morning)}</div>
             <div className="clock">{time}</div>
             </div>
         );
